@@ -1,0 +1,187 @@
+/* ===== ヘッダーのユーザーメニュー・フォロー・プロフィール編集 ===== */
+
+.gp-user-wrap {
+  position: relative;
+}
+
+.gp-icon-btn .gp-avatar-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.gp-user-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+  background-color: #414242;
+  border: 1px solid var(--purple-border);
+  border-radius: 16px;
+  padding: 8px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.gp-user-menu[hidden] {
+  display: none;
+}
+
+.gp-user-menu a {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.gp-user-menu a:hover {
+  background-color: var(--purple-main);
+  opacity: 1;
+}
+
+/* フォローボタン */
+.gp-follow-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 18px;
+  border: 1px solid #ffffff;
+  border-radius: 9999px;
+  background-color: var(--purple-main);
+  color: var(--text-white);
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.gp-follow-btn:hover {
+  opacity: 0.85;
+}
+
+.gp-follow-btn.is-following {
+  background-color: #ffffff;
+  color: var(--purple-main);
+  border-color: var(--purple-main);
+}
+
+.gp-follow-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* 編集ボタン（自分のプロフィール） */
+.gp-edit-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 18px;
+  border: 1px solid #ffffff;
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--text-white);
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.gp-edit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* プロフィール編集フォーム */
+.gp-profile-form {
+  background-color: var(--purple-main);
+  border: 1.5px solid var(--purple-border);
+  border-radius: 26px;
+  padding: 22px 24px;
+  margin: 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gp-profile-form[hidden] {
+  display: none;
+}
+
+.gp-profile-label {
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.gp-profile-form .gp-form-input,
+.gp-profile-form .gp-form-textarea {
+  width: 100%;
+  background-color: #dcdcdc;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #333;
+  outline: none;
+}
+
+.gp-profile-form .gp-form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.gp-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* 成功・エラーのお知らせ（投稿ページと同じ見た目。どのページでも使えるようにここにも書いています） */
+.gp-post-notice {
+  border-radius: 16px;
+  padding: 14px 20px;
+  margin-bottom: 24px;
+}
+
+.gp-post-notice ul {
+  list-style: none;
+}
+
+.gp-post-notice a {
+  text-decoration: underline;
+}
+
+.gp-post-notice-ok {
+  background-color: #2f6b45;
+}
+
+.gp-post-notice-error {
+  background-color: #8a2f3a;
+}
+
+.gp-auth-sublink {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+.gp-required {
+  color: #ff4d4d;
+  margin-left: 4px;
+}
+
+.gp-profile-form .gp-post-submit,
+.gp-edit-btn + .gp-post-submit,
+.gp-post-submit {
+  display: inline-block;
+  background-color: var(--purple-main);
+  color: var(--text-white);
+  border: 1.5px solid #ffffff;
+  padding: 10px 36px;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 9999px;
+}
+
+.gp-profile-form .gp-post-submit:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}

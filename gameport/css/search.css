@@ -1,0 +1,99 @@
+/* ===== 検索ページ（Figma: Frame 4） ===== */
+.gp-search-container {
+  max-width: 695px;
+  margin: 0 auto;
+  padding: 24px 24px 56px;
+  min-height: 60vh;
+}
+
+/* 戻る矢印（黒いアイコンを白に反転） */
+.gp-search-back img {
+  filter: invert(1);
+}
+
+.gp-search-top {
+  margin-bottom: 16px;
+}
+
+/* 大きな検索ボックス（灰色・角丸） */
+.gp-search-big {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #d9d9d9;
+  border: 1px solid #000;
+  border-radius: 22px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 24px 32px;
+  margin: 0 auto 32px;
+  max-width: 472px;
+}
+
+.gp-search-big input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1.6rem;
+  font-family: inherit;
+  color: #333;
+}
+
+.gp-search-big input::placeholder {
+  color: #ffffff;
+}
+
+.gp-search-count,
+.gp-search-empty {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.gp-search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 結果1件（トップの新着カードと同じ雰囲気） */
+.gp-search-result {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  border: 1.5px solid var(--purple-border);
+  border-radius: 26px;
+  padding: 14px;
+}
+
+.gp-search-thumb {
+  width: 120px;
+  height: 72px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #222;
+}
+
+.gp-search-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gp-search-info h2 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.gp-search-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .gp-search-big { padding: 16px 18px; }
+  .gp-search-big input { font-size: 1.1rem; }
+}

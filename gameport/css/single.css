@@ -1,0 +1,156 @@
+/* ===== ゲーム詳細ページ（Figma: Frame 7） ===== */
+.gp-single-container {
+  max-width: 853px;
+  margin: 0 auto;
+  padding: 16px 0 56px;
+}
+
+.gp-single-thumb {
+  width: 370px;
+  max-width: calc(100% - 48px);
+  aspect-ratio: 370 / 234;
+  margin: 0 24px 20px;
+  background-color: #222;
+  overflow: hidden;
+}
+
+.gp-single-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gp-single-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0 32px 12px;
+}
+
+/* タグ（紫のピル） */
+.gp-single-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0 24px 20px;
+}
+
+.gp-single-tag {
+  display: inline-block;
+  background-color: var(--purple-main);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 61px;
+  padding: 6px 32px;
+  font-size: 2rem;
+}
+
+.gp-single-heading {
+  font-size: 2.6rem;
+  font-weight: 400;
+  margin: 0 38px 4px;
+}
+
+/* ゲーム画面（横いっぱい） */
+.gp-single-screen {
+  width: 100%;
+  aspect-ratio: 853 / 448;
+  overflow: hidden;
+}
+
+.gp-single-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gp-single-content {
+  margin: 24px 32px;
+  font-size: 1rem;
+}
+
+/* スクリーンショット一覧 */
+.gp-single-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 0 24px 24px;
+}
+
+.gp-single-gallery img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 作者（丸いアイコン＋白い吹き出し） */
+.gp-single-author {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 32px 24px 0;
+}
+
+.gp-single-avatar {
+  width: 172px;
+  height: 172px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gp-single-avatar svg {
+  width: 96px;
+  height: 96px;
+}
+
+.gp-single-author-bio {
+  flex: 1;
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 41px;
+  padding: 22px 24px;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .gp-single-tag { font-size: 1.2rem; padding: 4px 20px; }
+  .gp-single-heading { font-size: 1.8rem; }
+  .gp-single-author { flex-direction: column; }
+  .gp-single-avatar { width: 110px; height: 110px; }
+}
+
+.gp-single-avatar img,
+.gp-single-avatar .gp-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.gp-single-author-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.gp-single-author-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.gp-single-author-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.gp-single-author-head .gp-follow-btn {
+  margin-top: 0;
+}

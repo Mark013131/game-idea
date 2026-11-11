@@ -1,0 +1,121 @@
+/* ===== 通知パネル（Figma: Frame 2 / Frame 3） ===== */
+.gp-notify-wrap {
+  position: relative;
+}
+
+.gp-notify-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: -50px;
+  width: 340px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background-color: #414242;
+  border-radius: 16px;
+  padding: 14px 18px 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  z-index: 100;
+}
+
+.gp-notify-panel[hidden],
+.gp-notify-view[hidden] {
+  display: none;
+}
+
+.gp-notify-top {
+  margin-bottom: 10px;
+}
+
+/* 戻る矢印（黒いアイコンを白っぽく見せる） */
+.gp-notify-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.gp-notify-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 一覧の1件（灰色の角丸カード） */
+.gp-notify-item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  background-color: #d9d9d9;
+  border: 1px solid #000;
+  border-radius: 22px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 12px 14px;
+  color: #000;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.gp-notify-item:hover {
+  opacity: 0.85;
+}
+
+.gp-notify-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.gp-notify-title {
+  font-size: 0.9rem;
+}
+
+.gp-notify-excerpt {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 詳細ビュー（Frame 3） */
+.gp-notify-detail {
+  background-color: #d9d9d9;
+  color: #000;
+  border-radius: 12px;
+  padding: 10px 16px 24px;
+  min-height: 240px;
+}
+
+.gp-notify-detail .gp-notify-back {
+  filter: none;
+}
+
+.gp-notify-detail-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.gp-notify-detail-head h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.gp-notify-body {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .gp-notify-panel {
+    position: fixed;
+    top: 60px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+  }
+}
