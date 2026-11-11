@@ -1,0 +1,260 @@
+/* ===== 投稿ページ（Figma: Frame 5） ===== */
+.gp-post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 24px 56px;
+}
+
+.gp-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.gp-post-label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.gp-required {
+  color: #ff4d4d;
+  margin-left: 4px;
+}
+
+/* 紫の角丸ボックス（タイトル・説明・タグ） */
+.gp-post-title-box,
+.gp-post-desc-box,
+.gp-post-tag-box {
+  background-color: var(--purple-main);
+  border-radius: 32px;
+  padding: 18px 28px 24px;
+}
+
+.gp-post-title-input,
+.gp-post-desc-input,
+.gp-post-tag-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  outline: none;
+  color: #ffebeb;
+  font-family: inherit;
+  padding: 10px 14px;
+}
+
+.gp-post-title-input:focus,
+.gp-post-desc-input:focus,
+.gp-post-tag-input:focus {
+  border-color: #ffffff;
+}
+
+.gp-post-title-input {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.gp-post-desc-input {
+  font-size: 1rem;
+  color: var(--text-white);
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.gp-post-title-input::placeholder,
+.gp-post-desc-input::placeholder,
+.gp-post-tag-input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* タグ追加 */
+.gp-post-tag-box {
+  border-radius: 51px;
+  text-align: center;
+}
+
+.gp-post-tag-label {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.gp-post-tag-row {
+  display: flex;
+  gap: 8px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.gp-post-tag-input {
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--text-white);
+}
+
+.gp-post-tag-add {
+  border: 1px solid #ffffff;
+  border-radius: 9999px;
+  background: transparent;
+  color: #ffffff;
+  padding: 0 18px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.gp-post-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.gp-post-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  padding: 2px 6px 2px 12px;
+}
+
+.gp-post-chip button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* サムネイル（白い四角） */
+.gp-post-image-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ffffff;
+  min-height: 424px;
+  cursor: pointer;
+  overflow: hidden;
+  color: #555;
+}
+
+.gp-post-image-icon {
+  width: 171px;
+  height: 171px;
+}
+
+.gp-post-image-hint {
+  font-size: 0.9rem;
+}
+
+/* 画像を選んだらプレビューを全面に */
+.gp-post-preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+
+.gp-post-preview[hidden] {
+  display: none;
+}
+
+/* required を効かせるため display:none ではなく見えなくするだけ */
+.gp-post-file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+/* スクリーンショット */
+.gp-post-shots-btn {
+  position: relative;
+  display: inline-block;
+  border: 1.5px dashed #ffffff;
+  border-radius: 14px;
+  padding: 10px 22px;
+  cursor: pointer;
+}
+
+.gp-post-shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.gp-post-shots img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gp-post-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 公開ボタン */
+.gp-post-submit {
+  display: inline-block;
+  background-color: var(--purple-main);
+  color: var(--text-white);
+  border: none;
+  padding: 14px 44px;
+  font-size: 1.8rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.gp-post-submit:hover {
+  opacity: 0.85;
+}
+
+/* 成功・エラーのお知らせ */
+.gp-post-notice {
+  border-radius: 16px;
+  padding: 14px 20px;
+  margin-bottom: 24px;
+}
+
+.gp-post-notice ul {
+  list-style: none;
+}
+
+.gp-post-notice a {
+  text-decoration: underline;
+}
+
+.gp-post-notice-ok {
+  background-color: #2f6b45;
+}
+
+.gp-post-notice-error {
+  background-color: #8a2f3a;
+}
+
+.gp-post-login {
+  text-align: center;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+@media (max-width: 640px) {
+  .gp-post-title-input { font-size: 1.3rem; }
+  .gp-post-tag-label { font-size: 1.4rem; }
+  .gp-post-image-box { min-height: 240px; }
+  .gp-post-image-icon { width: 100px; height: 100px; }
+  .gp-post-submit { font-size: 1.3rem; padding: 10px 32px; }
+}

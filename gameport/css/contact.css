@@ -1,0 +1,179 @@
+/*
+ * GAMEPORT お問い合わせページ専用CSS
+ * 共通のヘッダー・フッター・色の変数はテーマ直下の style.css にあります。
+ */
+
+/* ここから下：お問い合わせページ専用デザイン */
+/* ===== Layout ===== */
+.gp-contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 24px 56px;
+}
+
+/* 左（説明・FAQ）と右（フォーム）の2カラム */
+.gp-contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.gp-contact-side {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ===== Heading ===== */
+.gp-contact-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.gp-contact-lead {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ===== Card（紫の角丸ボックス） ===== */
+.gp-contact-card {
+  background-color: var(--purple-main);
+  border: 1.5px solid var(--purple-border);
+  border-radius: 26px;
+  padding: 22px 24px;
+}
+
+.gp-contact-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* その他の問い合わせ方法 */
+.gp-contact-methods {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+.gp-contact-methods li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.gp-contact-method-label {
+  font-size: 0.75rem;
+  color: #e0d6ff;
+}
+
+.gp-contact-methods a {
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* よくある質問 */
+.gp-faq-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.gp-faq-list a {
+  display: flex;
+  gap: 8px;
+}
+
+.gp-faq-q {
+  font-weight: 700;
+  color: #e0d6ff;
+}
+
+/* ===== Form ===== */
+.gp-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gp-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gp-form-row label {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* 必須マーク（赤い＊） */
+.gp-required {
+  color: #ff4d4d;
+  margin-left: 4px;
+}
+
+.gp-form-input {
+  width: 100%;
+  background-color: #dcdcdc;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #333;
+  outline: none;
+}
+
+.gp-form-input:focus {
+  box-shadow: 0 0 0 2px var(--purple-link);
+}
+
+.gp-form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* 送信ボタン */
+.gp-submit-btn {
+  align-self: center;
+  margin-top: 6px;
+  padding: 10px 56px;
+  border: 1.5px solid #ffffff;
+  border-radius: 9999px;
+  background-color: transparent;
+  color: var(--text-white);
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.gp-submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== Responsive（スマホでは縦1列に並べる） ===== */
+@media (max-width: 768px) {
+  .gp-contact-layout {
+    grid-template-columns: 1fr;
+  }
+  .gp-contact-container {
+    padding: 24px 16px 40px;
+  }
+  .gp-contact-title {
+    font-size: 1.5rem;
+  }
+}
+
+#faq, [id^="faq-"] { scroll-margin-top: 80px; }
+

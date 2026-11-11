@@ -1,0 +1,82 @@
+/* ===== ログイン・新規登録ページ ===== */
+.gp-auth-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.gp-auth-card {
+  background-color: var(--purple-main);
+  border: 1.5px solid var(--purple-border);
+  border-radius: 26px;
+  padding: 28px 28px 32px;
+}
+
+.gp-auth-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.gp-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gp-auth-form label {
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+.gp-auth-form .gp-form-input {
+  width: 100%;
+  background-color: #dcdcdc;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #333;
+  outline: none;
+}
+
+.gp-auth-form .gp-form-input:focus {
+  box-shadow: 0 0 0 2px var(--purple-link);
+}
+
+.gp-auth-remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 8px;
+  font-size: 0.85rem;
+}
+
+.gp-auth-form .gp-submit-btn {
+  align-self: center;
+  margin-top: 16px;
+  padding: 10px 56px;
+  border: 1.5px solid #ffffff;
+  border-radius: 9999px;
+  background-color: transparent;
+  color: var(--text-white);
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.gp-auth-form .gp-submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.gp-auth-switch {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.85rem;
+}
+
+.gp-auth-switch a {
+  text-decoration: underline;
+}

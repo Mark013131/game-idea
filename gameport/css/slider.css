@@ -1,0 +1,40 @@
+/* ===== トップのスライダー（style.css の .gp-hero に追加する分） ===== */
+/* スライドを重ねて、active のものだけ表示（ふわっと切り替え） */
+.gp-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.gp-hero-slide.active {
+  opacity: 1;
+}
+
+/* 前へ・次へボタン */
+.gp-hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.gp-hero-prev { left: 16px; }
+.gp-hero-next { right: 16px; }
+
+/* ○をボタンにしたので見た目を整える */
+button.gp-dot {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.2s, height 0.2s;
+}
